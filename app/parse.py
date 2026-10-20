@@ -93,7 +93,7 @@ def author_csv_formating(authors: dict, output_csv_path: str) -> None:
     with open(output_csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.writer(f)
         writer.writerow(AUTHOR_FIELDS)
-        writer.writerows(astuple(authors) for authors in authors.values())
+        writer.writerows(astuple(author) for author in authors.values())
 
 
 def main(output_csv_path: str) -> None:
